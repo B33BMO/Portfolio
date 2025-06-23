@@ -8,11 +8,7 @@ const GlassPanel = ({ children, className = "" }: { children: React.ReactNode; c
   </div>
   
 )
-useEffect(() => {
-  fetch("https://bmo.guru:5050/track", {
-    method: "POST",
-  });
-}, []);
+
 // --- Video Background Component ---
 const VideoBackground = () => (
   <video
@@ -155,6 +151,11 @@ const SocialLinks = () => (
 )
 
 export default function Home() {
+  useEffect(() => {
+    fetch("https://bmo.guru:5050/track", {
+      method: "POST",
+    });
+  }, []);
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
       {/* Video BG */}
