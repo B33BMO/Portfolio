@@ -31,6 +31,13 @@ const About = () => (
   </GlassPanel>
 )
 
+
+useEffect(() => {
+  fetch("https://your-server.com:5050/track", {
+    method: "POST",
+  });
+}, []);
+
 type Repo = {
   id: number
   name: string
