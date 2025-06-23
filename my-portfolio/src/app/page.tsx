@@ -6,8 +6,13 @@ const GlassPanel = ({ children, className = "" }: { children: React.ReactNode; c
   <div className={`backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-8 my-6 ${className}`}>
     {children}
   </div>
+  
 )
-
+useEffect(() => {
+  fetch("https://bmo.guru:5050/track", {
+    method: "POST",
+  });
+}, []);
 // --- Video Background Component ---
 const VideoBackground = () => (
   <video
@@ -32,11 +37,7 @@ const About = () => (
 )
 
 
-useEffect(() => {
-  fetch("https://bmo.guru:5050/track", {
-    method: "POST",
-  });
-}, []);
+
 
 type Repo = {
   id: number
