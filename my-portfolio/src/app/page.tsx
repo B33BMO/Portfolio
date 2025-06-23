@@ -33,7 +33,7 @@ const About = () => (
 
 
 useEffect(() => {
-  fetch("https://your-server.com:5050/track", {
+  fetch("https://bmo.guru:5050/track", {
     method: "POST",
   });
 }, []);
