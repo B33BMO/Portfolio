@@ -6,6 +6,7 @@ const PORT = 5050; // Or whatever
 app.use(express.json());
 
 app.post("/track", (req, res) => {
+  console.log("Got a /track request!", req.headers["user-agent"]);
   const ip =
     req.headers["x-forwarded-for"] ||
     req.socket.remoteAddress ||
