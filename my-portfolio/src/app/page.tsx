@@ -152,7 +152,7 @@ const SocialLinks = () => (
 
 export default function Home() {
   useEffect(() => {
-    fetch("https://bmo.guru:5050/track", {
+    fetch("https://localhost:5050/track", {
       method: "POST",
     });
   }, []);
