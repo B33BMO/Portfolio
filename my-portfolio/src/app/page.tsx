@@ -31,7 +31,6 @@ const About = () => (
   </GlassPanel>
 )
 
-// --- GitHub Projects Section ---
 type Repo = {
   id: number
   name: string
@@ -39,7 +38,10 @@ type Repo = {
   description: string
   stargazers_count: number
   language: string
+  fork: boolean
 }
+
+
 
 const useGitHubRepos = (username: string) => {
   const [repos, setRepos] = useState<Repo[]>([])
