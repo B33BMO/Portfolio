@@ -24,7 +24,7 @@ const VideoBackground = () => (
 // --- About Section ---
 const About = () => (
   <GlassPanel>
-    <h1 className="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight drop-shadow">Hey, I&apos;m <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">Bmo</span></h1>
+    <h1 className="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight drop-shadow">Hey, I&apos;m <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">Brandon</span></h1>
     <p className="opacity-90 text-lg max-w-2xl">
       Cybersecurity enthusiast, tech nerd, wannabe programmer and much more.<br/>
       <span className="opacity-60 text-base">Welcome to my lair on the Internet.</span>
@@ -156,6 +156,14 @@ export default function Home() {
       method: "POST",
     });
   }, []);
+  const [punchStatus, setPunchStatus] = useState(null)
+
+useEffect(() => {
+  fetch("/api/punch") // you'll create this backend endpoint next
+    .then((res) => res.json())
+    .then((data) => setPunchStatus(data))
+}, [])
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
       {/* Video BG */}
