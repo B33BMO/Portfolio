@@ -156,13 +156,7 @@ export default function Home() {
       method: "POST",
     });
   }, []);
-  const [punchStatus, setPunchStatus] = useState(null)
 
-useEffect(() => {
-  fetch("/api/punch") // you'll create this backend endpoint next
-    .then((res) => res.json())
-    .then((data) => setPunchStatus(data))
-}, [])
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
